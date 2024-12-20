@@ -1,0 +1,47 @@
+.sub-header
+  background-color: $text
+  padding: 15px 0
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__link
+    position: relative
+    font-size: 16px
+    line-height: 1
+    color: $white
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $red
+  &__right
+    display: flex
+    align-items: center
+  &__url
+    display: flex
+    align-items: center
+    @media (any-hover: hover)
+      &:hover .sub-header__svg
+        stroke: $red
+  &__svg
+    stroke: $white
+    margin-right: 10px
+    height: 24px
+    width: 24px
+    transition: stroke 0.3s ease-in
+  &__link-store
+    &::before
+      // content: none
+  &__link-phone
+    margin-right: 60px
+    font-size: 18px
+    font-weight: bold
+    &::before
+      // background: url("../images/icons/sprite.svg#phone") center / cover no-repeat
+      // background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.04 19.506C13.2575 18.7925 10.7179 17.3445 8.68671 15.3133C6.65555 13.2821 5.20749 10.7425 4.494 7.96C3.949 5.819 5.79 4 8 4L9 4C9.552 4 9.995 4.449 10.05 4.998C10.1405 5.9084 10.3555 6.80207 10.689 7.654L9.169 9.174C10.3554 11.6489 12.3511 13.6446 14.826 14.831L16.346 13.311C17.1979 13.6448 18.0916 13.8602 19.002 13.951C19.552 14.005 20 14.448 20 15V16C20 18.21 18.181 20.051 16.04 19.506Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center / cover no-repeat
+  &__link-email
+    &::before
+      // background: url("../images/icons/sprite.svg#email") center / cover no-repeat
+      // background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 5V4.5C2.86739 4.5 2.74021 4.55268 2.64645 4.64645C2.55268 4.74021 2.5 4.86739 2.5 5H3ZM21 5H21.5C21.5 4.86739 21.4473 4.74021 21.3536 4.64645C21.2598 4.55268 21.1326 4.5 21 4.5V5ZM3 5.5H21V4.5H3V5.5ZM20.5 5V17H21.5V5H20.5ZM19 18.5H5V19.5H19V18.5ZM3.5 17V5H2.5V17H3.5ZM5 18.5C4.60218 18.5 4.22064 18.342 3.93934 18.0607C3.65804 17.7794 3.5 17.3978 3.5 17H2.5C2.5 17.663 2.76339 18.2989 3.23223 18.7678C3.70107 19.2366 4.33696 19.5 5 19.5V18.5ZM20.5 17C20.5 17.3978 20.342 17.7794 20.0607 18.0607C19.7794 18.342 19.3978 18.5 19 18.5V19.5C19.663 19.5 20.2989 19.2366 20.7678 18.7678C21.2366 18.2989 21.5 17.663 21.5 17H20.5Z' fill='white'/%3E%3Cpath d='M3 5L12 14L21 5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center / cover no-repeat
+
+
