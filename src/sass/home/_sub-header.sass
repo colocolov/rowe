@@ -14,15 +14,18 @@
     @media (any-hover: hover)
       &:hover
         color: $red
+        & + .sub-header__svg
+          stroke: $red
   &__right
     display: flex
     align-items: center
   &__url
     display: flex
+    flex-direction: row-reverse
     align-items: center
-    @media (any-hover: hover)
-      &:hover .sub-header__svg
-        stroke: $red
+    // @media (any-hover: hover)
+    //   &:hover .sub-header__svg
+    //     stroke: $red
   &__svg
     stroke: $white
     margin-right: 10px

@@ -3,6 +3,8 @@ import vars from "./_vars.js";
 
 // мои модули
 import "./modules/nav.js";
+import "./modules/bgHero.js";
+import "./modules/heroSlider.js";
 //import "./modules/dinam-adap.js";
 //import "./modules/main-slider.js";
 
