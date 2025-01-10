@@ -5,6 +5,7 @@ import vars from "./_vars.js";
 import "./modules/nav.js";
 import "./modules/bgHero.js";
 import "./modules/heroSlider.js";
+import "./modules/aboutVideo.js";
 //import "./modules/dinam-adap.js";
 //import "./modules/main-slider.js";
 
