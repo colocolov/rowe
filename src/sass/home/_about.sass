@@ -62,14 +62,16 @@
 
   &__play
     position: absolute
-    top: 0
-    left: 0
+    top: 50%
+    left: 50%
     width: 100px
     height: 100px
-    transform: translate(50%)
+    transform: translateX(-50%) translateY(-50%)
     z-index: 4
     cursor: pointer
     background-color: transparent
+    transition: opacity 0.1s ease-in
+    opacity: 1
 
   &__bg
     position: absolute

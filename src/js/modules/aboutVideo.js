@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Обработчик клика на кнопку Play
     playButton.addEventListener("click", () => {
-      playButton.style.display = "none"; // Скрыть кнопку Play
+      // playButton.style.display = "none"; // Скрыть кнопку Play
+      playButton.style.opacity = "0"; // Скрыть кнопку Play
+      playButton.style.pointerEvents = "none"; // Отключить взаимодействие с кнопкой
       videoBackground.style.display = "none"; // Скрыть фоновую картинку
       video.play(); // Воспроизвести видео
     });
@@ -47,12 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
     video.addEventListener("click", () => {
       if (video.paused) {
         video.play(); // Воспроизвести видео
-        playButton.style.display = "none"; // Скрыть кнопку Play
+        // playButton.style.display = "none"; // Скрыть кнопку Play
+        playButton.style.opacity = "0"; // Скрыть кнопку Play
+        playButton.style.pointerEvents = "none"; // Отключить взаимодействие с кнопкой
         videoBackground.style.display = "none"; // Скрыть фоновую картинку
       } else {
         video.pause(); // Остановить видео
-        playButton.style.display = "block"; // Показать кнопку Play
-        videoBackground.style.display = "block"; // Показать фоновую картинку
+        // playButton.style.display = "block"; // Показать кнопку Play
+        playButton.style.opacity = "1"; // Показать кнопку Play
+        playButton.style.pointerEvents = "auto"; // Отключить взаимодействие с кнопкой
+        // videoBackground.style.display = "block"; // Показать фоновую картинку
       }
     });
   });
