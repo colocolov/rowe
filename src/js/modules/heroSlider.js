@@ -15,14 +15,8 @@ if (_vars.heroSliderEl) {
   new Swiper(_vars.heroSliderEl, {
     loop: true,
     autoplay: {
-      //пауза между прокруткой
       delay: 3000,
-      //закончить на последнем слайде
-      // stopOnLastSlide: false,
-      //отключить после ручного переключения
-      // disableOnInteraction: false,
     },
-    //скорость переключения слайдов
     speed: 800,
     // навигация по стрелкам
     // navigation: {

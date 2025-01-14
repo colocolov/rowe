@@ -1,0 +1,54 @@
+.contacts
+  padding-top: 70px
+  padding-bottom: 70px
+  background-color: $grey
+
+  &__container
+    display: flex
+
+  &__logo
+    max-width: 270px
+    & img
+      margin-bottom: 10px
+    span
+      font-style: italic
+  &__certificat
+    margin-left: auto
+    margin-right: 124px
+  &__head
+    font-size: 22px
+    margin-bottom: 20px
+    text-transform: capitalize
+    color: $text
+  &__imgs
+    display: flex
+    gap: 24px
+    img
+      width: 87px
+  &__data
+    margin-right: 132px
+  &__item
+    display: flex
+    gap: 8px
+    &:not(:last-child)
+      margin-bottom: 15px
+    @media (any-hover: hover)
+      &:hover
+        .contacts__name
+          color: $red
+        .contacts__svg
+          stroke: $red
+  &__svg
+    width: 100%
+    height: 100%
+    stroke: $text
+    // fill: $text
+    transition: stroke 0.3s ease-in
+  &__icon
+    width: 26px
+    height: 26px
+    margin-right: 2px
+  &__name
+    color: $text
+    transition: color 0.3s ease-in
+

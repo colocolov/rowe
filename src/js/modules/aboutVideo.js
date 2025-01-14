@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       playButton.style.opacity = "0"; // Скрыть кнопку Play
       playButton.style.pointerEvents = "none"; // Отключить взаимодействие с кнопкой
       videoBackground.style.display = "none"; // Скрыть фоновую картинку
+      video.load(); // Загрузить видео
       video.play(); // Воспроизвести видео
     });
 

@@ -1,7 +1,7 @@
 .menu
-  --height-span: 22px //--- ВЫСОТА БУРГЕРА
-  --width-span: 30px //--- ШИРИНА БУРГЕРА
-  --weight-span: 2px //--- ТОЛЩИНА ПОЛОСКИ БУРГЕРА
+  --height-span: 22px
+  --width-span: 30px
+  --weight-span: 2px
   // margin-left: 50px
   &__body
     // margin-top: -5px
@@ -11,33 +11,37 @@
       right: -100%
       width: 100%
       height: 100%
-      padding: 150px 30px 50px 30px
-      background-color: rgba($text, 0.9) // ---------- ЦВЕТ ФОНА У МЕНЮ
+      padding: 120px 30px 50px 30px
+      background-color: rgba($text, 0.85)
       overflow: auto
       transition: right 0.5s ease 0s
       z-index: 2
+      display: flex
+      flex-direction: column
       // justify-content: flex-end
       // подложка под верхнее меню, если оно имеет фон
-      &::before
-        content: ''
-        position: fixed
-        top: 0
-        right: -100%
-        width: 100%
-        height: 85px
-        background-color: $black // ---------- ЦВЕТ ФОНА У ШАПКИ
-        // background-color: $text
-        transition: right 0.5s ease 0s
-        z-index: 2
+      // &::before
+      //   content: ''
+      //   position: fixed
+      //   top: 0
+      //   right: -100%
+      //   width: 100%
+      //   height: 85px
+      //   background-color: $black // ---------- ЦВЕТ ФОНА У ШАПКИ
+      //   // background-color: $text
+      //   transition: right 0.5s ease 0s
+      //   z-index: 2
     &._active
       right: 0
       &::before
         right: 0
   &__list
-    @include fx-all
+    display: flex
+    align-items: center
+    justify-content: flex-end
     flex-wrap: wrap
-    @include mediaNotebook
-      flex-wrap: wrap
+    // @include mediaNotebook
+      // flex-wrap: wrap
     @include mediaPhone
       flex-direction: column
       align-items: flex-end
@@ -91,12 +95,15 @@
         &:last-child a
           // color: $white
       @include mediaNotebook
-        padding: 15px 10px
-        margin-bottom: 7px
+        // padding: 15px 10px
+        // margin-bottom: 7px
       @include mediaPhone
         width: 100%
-        padding: 10px 20px
+        padding: 0
         margin-bottom: 0
+        color: $white
+        &::before
+          content: none
     & li.current-menu-item a
       background-color: lighten($black, 3)
     & li ul
@@ -160,42 +167,16 @@
       &:hover
         &:last-child a
           // color: $white
-
-    // уточнить!!!
-    // &:last-child a
-    //   transition: 0.3s linear
-    //   margin-left: 120px
-
-
-    // субменю
-    // @media (any-hover: hover)
-    //   &:hover
-    //     .menu__sub-list
-    //       visibility: visible
-    //       pointer-events: auto
-    //       opacity: 1
-    //       transform: translate(0px, 0px)
-    //     .menu__arrow
-    //       transform: rotate(-180deg)
-    //     .menu__arrow
-    //       color: $black
-    // @media (min-width: 768px)
-    //   &._hover
-    //     .menu__sub-list
-    //       visibility: visible
-    //       pointer-events: auto
-    //       opacity: 1
-    //       transform: translate(0px, 0px)
-    //     .menu__arrow
-    //       transform: rotate(-180deg)
     @include mediaPhone
       margin-bottom: 40px
       font-weight: 800
       font-size: 32px
-      color: $text // ---------- ЦВЕТ ССЫЛОК НА МОБИЛКАХ
+      color: $white // ---------- ЦВЕТ ССЫЛОК НА МОБИЛКАХ
       &:not(:last-child)
         margin-right: 0
         margin-bottom: 10px
+        &::after
+          content: none
   // стрелка
   // &__arrow
   //   width: 12px
@@ -285,12 +266,17 @@
   // МЕНЮ ДЛЯ ЯЗЫКОВ
   // @import 'language-menu'
   &-languages
+    & > li
+      background-color: $red
     & li
       &::after
         content: none
       & a
+        color: $white
         &::after
           top: 0 !important
+        &::before
+          content: none
       & ul a
         color: $white
         &:hover
@@ -302,11 +288,13 @@
       order: 1
       & li
         display: flex
+        gap: 20px
+        background-color: transparent
         & a
           width: auto
           // order: 2
           &:hover
-            background-color: $blue
+            // background-color: $blue
           &::after
             content: none !important
         & ul
@@ -319,9 +307,9 @@
           align-items: center
           top: 0
           opacity: 1
-          background-color: $blue
+          // background-color: $blue
           & a
-            padding-left: 10px !important
+            padding-left: 5px !important
             &:hover
               background-color: $blue
 
@@ -331,10 +319,13 @@
         display: flex
         align-items: center
         flex-wrap: nowrap
+        gap: 20px
       & li a
+        background-color: $red
         width: auto
         font-size: 20px
-        padding-right: 0
+        // padding-right: 0
+        padding: 5px
         &::after
           content: none !important
       & li ul
@@ -344,9 +335,10 @@
         max-height: unset
         display: flex
         z-index: 1
+        gap: 20px
       & li ul a
         font-size: 20px
-        padding-right: 0
+        padding: 5px
 
 // подменю  
 .sub-menu

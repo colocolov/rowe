@@ -2,33 +2,49 @@
   padding: 30px 0
   background-color: $white
   @include mediaTablet
-    position: fixed
-    background-color: $text
-    box-shadow: 0 1px 35px 0 rgba($black, 0.1)
-    z-index: 100
-    width: 100%
+    // position: fixed
+    // background-color: $text
+    // z-index: 100
+    // width: 100%
   @include mediaPhone
+    padding: 15px 0
     position: fixed
     top: 0
     left: 0
     width: 100%
     z-index: 7
-    background-color: $black
+    box-shadow: 0 1px 35px 0 rgba($black, 0.1)
+    // background-color: $black
 
   &__container
     @include fx-all
+    gap: 50px
+    @include mediaNotebook
+      align-items: flex-start
 
   &__logo
+    @include mediaNotebook
+      max-width: 210px
+    @include mediaPhone
+      position: relative
+      z-index: 5
     img
       width: 227px
       height: 53px
+      @include mediaNotebook
+        max-width: 180px
     span
       display: block
       font-size: 16px
       font-style: italic
       color: $text
+      transition: color 0.3s ease-in
+      @include mediaNotebook
+        font-size: 14px
+      // @include mediaPhone
+      //   color: $white
 
   &__menu
     margin-left: auto
-    margin-right: 50px
+    // margin-right: 50px
 

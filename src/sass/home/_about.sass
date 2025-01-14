@@ -25,18 +25,17 @@
 
 
   &__descr
-    max-width: 630px
+    flex-basis: 49%
   &__head
     margin-bottom: 30px
-    span
-      color: $red
   &__text
     & p:not(:last-child)
       margin-bottom: 7px
 
   &__clip
     position: relative
-    width: 649px
+    // width: 649px
+    flex-basis: 50.8%
     overflow: hidden
     @media (any-hover: hover)
       &:hover
@@ -47,7 +46,7 @@
           padding-left: 20%
   &__video
     position: relative
-    width: 536px
+    width: 82.46%
     height: 300px
     z-index: 1
     &::before
@@ -100,7 +99,7 @@
   &__subvideo
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)
     background-color: #d9d9d9
-    width: 535px
+    max-width: 82.46%
     height: 300px
     margin-top: -210px
     margin-left: auto
