@@ -2,6 +2,15 @@ document.addEventListener('scroll', () => {
   const productSection = document.querySelector('.product');
   const images = document.querySelectorAll('.product__img');
   
+  // Проверяем ширину экрана
+  if (window.innerWidth <= 768) {
+    // Сбрасываем стили для мобильных устройств
+    images.forEach((img) => {
+      img.style.transform = 'translateX(0)';
+    });
+    return; // Останавливаем выполнение скрипта
+  }
+  
   const rect = productSection.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 

@@ -5,6 +5,13 @@
   &-container
     display: flex
     gap: 30px
+    @include mediaPhone
+      flex-direction: column
+      margin: 0 auto
+      // padding: 0 15px
+      width: 100%
+      padding-right: 0
+      padding-bottom: 70px
   //   margin: 0 auto
   //   padding-right: 15px
   //   max-width: 1360px
@@ -18,11 +25,22 @@
   &__img
     padding-bottom: 678px
     width: 100%
+    flex-basis: 48%
+    @include mediaPhone
+      padding-bottom: 350px
   &__info
     max-width: 650px
+    flex-basis: 48%
     display: flex
     flex-direction: column
     justify-content: center
+    @include mediaTablet
+      padding-top: 30px
+      padding-bottom: 30px
+    @include mediaPhone
+      padding: 15px
+      max-width: 100%
+      flex-basis: 100%
   &__head
     margin-bottom: 30px
   &__text
@@ -31,7 +49,18 @@
     display: flex
     justify-content: space-between
     align-items: flex-end
+    gap: 20px
+    @include mediaTablet
+      gap: 50px
+      flex-wrap: wrap
+      justify-content: center
   &__item
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    height: 100%
+    @include mediaTablet
+      height: auto
   &__icon
     width: 86px
     height: 86px
@@ -45,6 +74,7 @@
     font-size: 28px
     color: $red
     font-family: $font-first
+    margin-bottom: 10px
   &__name
     text-align: center
     font-weight: 700

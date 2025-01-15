@@ -34,6 +34,12 @@
     &:nth-child(5)
       z-index: 1
       margin-left: -90px
+    @include mediaPhone
+      transform: translateX(0) !important
+    @include mediaPhoneMid
+      margin: 0 -5%
+    @include mediaPhoneSm
+      margin: 0 -10%
 
   &__descr
     margin: 0 auto

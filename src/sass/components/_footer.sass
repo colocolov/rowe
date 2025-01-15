@@ -7,11 +7,16 @@
     display: flex
     align-items: center
     justify-content: space-between
+    @include mediaPhoneMid
+      flex-direction: column-reverse
   &__copyright
     font-size: 16px
   &__social
     display: flex
     align-items: center
+    @include mediaPhoneMid
+      flex-wrap: wrap
+      margin-bottom: 20px
 
   &__item
     transition: color 0.3s ease
