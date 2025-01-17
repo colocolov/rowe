@@ -7,7 +7,7 @@
     display: flex
     gap: 54px
     &:not(:last-child)
-      margin-bottom: 20px
+      margin-bottom: 50px
       @include mediaNotebook
         margin-bottom: 50px
     @include mediaNotebook
@@ -44,17 +44,62 @@
   &__head
     margin-bottom: 30px
   &__text
+    margin-bottom: 30px
+    span
+      color: $red
+      font-weight: 700
     & p:not(:last-child)
       margin-bottom: 7px
     // @include mediaPhone
     //   font-size: 16px
+  &__advance
+    display: flex
+    gap: 30px
+    // height: 230px
+  &__item
+    flex-basis: 48.5%
+    // height: 100%
+    display: flex
+    flex-direction: column
+    // justify-content: space-between
+  &__title
+    @include font(700, 22, 24)
+    font-family: $font-first
+    margin-bottom: 10px
+    height: 50px
+    color: $text
+    text-transform: none
+  &__info
+    span
+      color: $red
+      font-weight: 700
+    p
+      position: relative
+      padding-left: 10px
+      &::before
+        content: ''
+        position: absolute
+        top: 9px
+        left: 0
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background-color: $red
+      &:not(:last-child)
+        margin-bottom: 5px
+
+  &__links
+
+  &__btn
+    &:not(:last-child)
+      margin-bottom: 10px
 
   &__clip
     position: relative
     // width: 649px
     flex-basis: 50.8%
     overflow: hidden
-    @media (any-hover: hover)
+    @media (any-hover: hover) and (pointer: fine)
       &:hover
         & .about__subvideo
           background-color: $text
@@ -128,6 +173,7 @@
     display: flex
     align-items: flex-end
     padding: 21px
+    justify-content: flex-end
     transition: background-color 0.5s ease, color 0.4s ease, clip-path 0.5s ease, padding 0.4s ease
     // @include mediaPhone
       // font-size: 16px

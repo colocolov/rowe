@@ -127,6 +127,16 @@ input
   @extend %head
   color: $blue
   text-transform: uppercase
+  position: relative
+  padding-left: 50px
+  &::before
+    content: ''
+    position: absolute
+    top: 21px
+    left: 0
+    width: 40px
+    height: 1px
+    background-color: $red
   span
     color: $red
 

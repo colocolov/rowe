@@ -87,7 +87,7 @@
         // border-radius: 2px
         z-index: -1
         transition: background-color 0.3s ease-in
-      @media (any-hover: hover)
+      @media (any-hover: hover) and (pointer: fine)
         &:hover
           color: $white
           &::before
@@ -163,7 +163,7 @@
         background-color: $red
         transition: width 0.5s ease
         transform: rotate(11deg) translateY(50%)
-    @media (any-hover: hover)
+    @media (any-hover: hover) and (pointer: fine)
       &:hover
         &:last-child a
           // color: $white
@@ -412,7 +412,7 @@
   @include mediaPhone
     padding: 0
     width: auto
-  @media (any-hover: hover)
+  @media (any-hover: hover) and (pointer: fine)
     &:hover
       background-color: lighten($black, 3)
 
