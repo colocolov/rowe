@@ -7,6 +7,7 @@ import "./modules/bgHero.js";
 import "./modules/heroSlider.js";
 import "./modules/aboutVideo.js";
 import "./modules/productAnimate.js";
+import "./modules/brendsSlider.js";
 import "./modules/numbersAnimate.js";
 import "./modules/dinam-adap.js";
 //import "./modules/main-slider.js";

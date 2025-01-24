@@ -31,11 +31,11 @@ $mobileSmall: 479.98px // Телефоны S - 480px
 
 :root
   --widthscrollbar: 17px
-  // **********************************************
-  // СДЕЛАТЬ ВЕРХНИЙ И НИЖНИЙ ОТСТУП У SECTION
   --sectionPaddingTop: 100px
   --sectionPaddingBottom: 100px
-  // ---------------- END
+  @include mediaPhone
+    --sectionPaddingTop: 50px
+    --sectionPaddingBottom: 50px
 
 %body
   font-family: $font-second
@@ -48,6 +48,10 @@ $mobileSmall: 479.98px // Телефоны S - 480px
 
 %head
   font-family: $font-first
+  word-break: break-all
+  letter-spacing: -0.02em
   @include font(700, 40, 44)
   @include mediaNotebook
     font-size: 32px
+  @include mediaPhoneSm
+    font-size: 28px

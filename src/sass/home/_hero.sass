@@ -33,7 +33,7 @@
     transition: background-color 0.3s ease
 
   &__text
-    flex-basis: 48%
+    flex-basis: 44%
     // max-width: 530px
     padding-left: 53px
     padding-top: 100px
@@ -42,34 +42,37 @@
       // max-width: 50%
       padding-left: 10px
     @include mediaPhone
-      flex-basis: 55%
-      padding-top: 50px
-    @include mediaPhoneMid
+      // flex-basis: 55%
+      // padding-top: 50px
+      padding-left: 5%
       flex-basis: 80%
+    @include mediaPhoneMid
+      padding-top: 50px
   &__head
-    font-size: 56px
+    font-size: 46px
     margin-bottom: 20px
-    text-transform: uppercase
+    text-transform: none
+    // text-transform: uppercase
+    color: $white
+    padding-left: 0
     &::before
-      top: 30px
+      content: none
     @include mediaNotebook
       font-size: 32px
   &__descr
+    max-width: 85%
     & p:not(:last-child)
       margin-bottom: 7px
     @include mediaNotebook
       font-size: 16px
 
   &__img
-    flex-basis: 48%
+    flex-basis: 52%
     width: 100%
     height: var(--height)
     @include mediaNotebook
       max-width: 50%
     @include mediaPhone
-      flex-basis: 37%
-      flex-shrink: 1
-    @include mediaPhoneMid
       position: absolute
       top: 0
       left: 0
@@ -78,8 +81,17 @@
       z-index: -1
       max-width: 100%
       opacity: 0.7
-
-
+      filter: blur(0.7px)
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        background-color: #000
+        height: 100%
+        opacity: 0.5
+        z-index: 1
     img
       object-fit: contain
   &__pagination

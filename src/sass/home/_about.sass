@@ -37,9 +37,10 @@
     flex-basis: 49%
     @include mediaNotebook
       max-width: 85%
-    @include mediaPhoneSm
+    @include mediaPhone
       max-width: 100%
       width: 100%
+    @include mediaPhoneSm
       flex-basis: 100%
   &__head
     margin-bottom: 30px
@@ -56,6 +57,9 @@
     display: flex
     gap: 30px
     // height: 230px
+    @include mediaPhoneSm
+      flex-direction: column
+      max-width: 95%
   &__item
     flex-basis: 48.5%
     // height: 100%
@@ -89,10 +93,16 @@
         margin-bottom: 5px
 
   &__links
+    gap: 15px
+    display: flex
+    flex-wrap: wrap
 
   &__btn
-    &:not(:last-child)
-      margin-bottom: 10px
+    flex: 1 1 48%
+    max-width: 48%
+    @include mediaPhoneSm
+      max-width: 100%
+      flex-basis: 100%
 
   &__clip
     position: relative

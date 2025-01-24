@@ -7,14 +7,16 @@
     display: flex
     justify-content: space-between
     gap: 50px
-    // @include mediaTablet
-    @include mediaPhone
+    @include mediaNotebook
       flex-wrap: wrap
+      flex-direction: column
+      align-items: flex-start
 
   &__logo
     max-width: 270px
     @include mediaNotebook
       max-width: 210px
+
     @include mediaPhone
       max-width: 100%
       width: 100%
@@ -41,19 +43,28 @@
     &::before
       content: none
   &__imgs
-    display: flex
+    display: grid
     gap: 24px
-    align-items: flex-start
-    flex-wrap: wrap
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr)
+    @include mediaPhoneMid
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr)
     img
       max-width: 150px
       // width: 100%
       height: auto
       object-fit: contain
+      &:nth-child(1)
+        grid-row: span 2
+        grid-column: 1 / 2
+      &:nth-child(2)
+        grid-row: span 2
+        grid-column: 2 / 3
+
   &__data
-    margin-right: 120px
-    @include mediaTablet
-      margin-right: 0
+    // margin-right: 120px
+    // @include mediaTablet
+    //   margin-right: 0
+    flex-shrink: 1
   &__item
     display: flex
     gap: 8px
@@ -75,6 +86,7 @@
   &__btn
     background-color: $red
     color: $white
+    width: 100%
   &__svg
     width: 100%
     height: 100%
@@ -88,4 +100,10 @@
   &__name
     color: $text
     transition: color 0.3s ease-in
+    &-wrap
+      display: flex
+      align-items: center
+      justify-content: space-between
+      dd
+        margin-left: 10px
 

@@ -1,0 +1,26 @@
+.brends
+  padding-top: var(--sectionPaddingTop)
+  padding-bottom: var(--sectionPaddingBottom)
+
+  &__container
+  &__head
+    margin-bottom: 30px
+
+  &__text
+    max-width: 80%
+    margin-bottom: 70px
+    @include mediaPhone
+      max-width: 95%
+    p
+      &:not(:last-child)
+        margin-bottom: 7px
+    span
+      color: $red
+      font-weight: 700
+  &__slider
+    height: 170px
+    &-wrap
+  &__slide
+    // height: 250px
+    // padding: 30px
+    // width: 250px
