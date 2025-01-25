@@ -11,8 +11,8 @@
       right: -100%
       width: 100%
       height: 100%
-      padding: 120px 30px 50px 30px
-      background-color: rgba($text, 0.95)
+      padding: 130px 30px 50px 30px
+      background-color: rgba($text, 0.99)
       overflow: auto
       transition: right 0.5s ease 0s
       z-index: 2
@@ -20,17 +20,17 @@
       flex-direction: column
       // justify-content: flex-end
       // подложка под верхнее меню, если оно имеет фон
-      // &::before
-      //   content: ''
-      //   position: fixed
-      //   top: 0
-      //   right: -100%
-      //   width: 100%
-      //   height: 85px
-      //   background-color: $black // ---------- ЦВЕТ ФОНА У ШАПКИ
-      //   // background-color: $text
-      //   transition: right 0.5s ease 0s
-      //   z-index: 2
+      &::before
+        content: ''
+        position: fixed
+        top: 0
+        right: -100%
+        width: 100%
+        height: 120px
+        background-color: $text // ---------- ЦВЕТ ФОНА У ШАПКИ
+        // background-color: $text
+        transition: right 0.5s ease 0s
+        z-index: 2
     &._active
       right: 0
       &::before

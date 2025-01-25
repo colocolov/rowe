@@ -939,7 +939,6 @@ a:hover {
 
 .heading {
   font-family: "OpenSans", sans-serif;
-  word-break: break-all;
   letter-spacing: -0.02em;
   font-weight: 700;
   font-size: 40px;
@@ -1107,6 +1106,16 @@ input {
   position: relative;
   padding-left: 50px;
 }
+@media screen and (max-width: 991.98px) {
+  .heading {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .heading {
+    padding-left: 30px;
+  }
+}
 .heading::before {
   content: "";
   position: absolute;
@@ -1115,6 +1124,27 @@ input {
   width: 40px;
   height: 1px;
   background-color: #E4170F;
+}
+@media screen and (max-width: 1023.98px) {
+  .heading::before {
+    top: 17px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .heading::before {
+    width: 35px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .heading::before {
+    width: 28px;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .heading::before {
+    top: 14px;
+    width: 25px;
+  }
 }
 .heading span {
   color: #E4170F;
@@ -1208,13 +1238,24 @@ input {
     right: -100%;
     width: 100%;
     height: 100%;
-    padding: 120px 30px 50px 30px;
-    background-color: rgba(63, 78, 84, 0.95);
+    padding: 130px 30px 50px 30px;
+    background-color: rgba(63, 78, 84, 0.99);
     overflow: auto;
     transition: right 0.5s ease 0s;
     z-index: 2;
     display: flex;
     flex-direction: column;
+  }
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 120px;
+    background-color: #3F4E54;
+    transition: right 0.5s ease 0s;
+    z-index: 2;
   }
 }
 .menu__body._active {
@@ -2113,6 +2154,11 @@ input {
   border-radius: 50%;
   background-color: #E4170F;
 }
+@media screen and (max-width: 767.98px) {
+  .about__info p::before {
+    top: 7px;
+  }
+}
 .about__info p:not(:last-child) {
   margin-bottom: 5px;
 }
@@ -2306,12 +2352,30 @@ input {
   padding-top: var(--sectionPaddingTop);
   padding-bottom: var(--sectionPaddingBottom);
 }
+@media screen and (max-width: 991.98px) {
+  .brends__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .brends__head {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 991.98px) {
+  .brends__head {
+    padding-left: 65px;
+    padding-right: 15px;
+  }
 }
 .brends__text {
   max-width: 80%;
   margin-bottom: 70px;
+}
+@media screen and (max-width: 991.98px) {
+  .brends__text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   .brends__text {

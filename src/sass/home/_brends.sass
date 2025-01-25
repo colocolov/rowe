@@ -3,12 +3,22 @@
   padding-bottom: var(--sectionPaddingBottom)
 
   &__container
+    @include mediaTablet
+      padding-left: 0
+      padding-right: 0
+
   &__head
     margin-bottom: 30px
+    @include mediaTablet
+      padding-left: 65px
+      padding-right: 15px
 
   &__text
     max-width: 80%
     margin-bottom: 70px
+    @include mediaTablet
+      padding-left: 15px
+      padding-right: 15px
     @include mediaPhone
       max-width: 95%
     p
