@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Проверяем, видна ли секция на 80%
     if (!hasAnimated && sectionTop < screenHeight * 0.95 && sectionTop + sectionHeight > 0) {
       hasAnimated = true; // Устанавливаем флаг, чтобы не запускать анимацию повторно
-      console.log(numbersVideo);
+      // console.log(numbersVideo);
       animateNumbers(); // Запускаем анимацию чисел
       numbersVideo.load();
       numbersVideo.play();

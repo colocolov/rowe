@@ -2366,6 +2366,9 @@ input {
     padding-left: 65px;
     padding-right: 15px;
   }
+  .brends__head::before {
+    left: 15px;
+  }
 }
 .brends__text {
   max-width: 80%;
